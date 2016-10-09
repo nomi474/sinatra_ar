@@ -30,7 +30,7 @@ require 'sinatra'
 	
 	delete '/people/:id' do
 		person = Person.find(params[:id])
-		person.delete
+		person.destroy
 		redirect "/people"	
 	end
 	

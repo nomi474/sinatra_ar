@@ -27,6 +27,13 @@ require 'sinatra'
 		person.save
 		redirect "/people/#{person.id}"
 	end
+	
+	delete '/people/:id' do
+		person = Person.find(params[:id])
+		person.delete
+		redirect "/people"	
+	end
+	
 	post '/people' do
 		person = Person.create(first_name: params[:first_name], last_name: params[:last_name], 
 						birthdate: params[:birthdate])

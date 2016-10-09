@@ -4,6 +4,7 @@
 			<th>Name</th>
 			<th>Date of Birth</th>
 			<th>NameBirthdateEdit</th>
+			<th>Delete</th>
 		</tr>
 		   <% 
 			@people.each do |person|
@@ -19,8 +20,15 @@
 			<td><%=noUTC%></td>
 			<td>
 				<a href = "/people/<%=person.id%>/edit">
+				<!--<a href = "<%="/people/#{person.id}/edit" %>">-->
 					Edit
 				</a>
+			</td>
+			<td>
+				<form action ="/people/<%=person.id%>" method="post">
+					<input type="hidden" name="_method" value="delete" />
+					<input type="submit" value="Delete" />
+				</form>
 			</td>
 		</tr>
 		<% end %>

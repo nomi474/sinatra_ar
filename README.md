@@ -1,0 +1,1 @@
+"#sintara_ar" 

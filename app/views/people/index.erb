@@ -1,0 +1,21 @@
+<h1>People</h1>
+	<table border = 1>
+		<tr>
+			<th>Name</th>
+			<th>Date of Birth</th>
+		</tr>
+		   <% 
+			@people.each do |person|
+			   birthdate = person.birthdate.to_s
+			   noUTC = birthdate[0, birthdate.length - 13] 
+			%>
+		<tr>
+			<td width = 200>
+			<a href="/people/<%=person.id%>">
+			<%= "#{person.first_name} #{person.last_name}"%>
+			</a>
+			</td>
+			<td><%=noUTC%></td>
+		</tr>
+		<% end %>
+	</table>   

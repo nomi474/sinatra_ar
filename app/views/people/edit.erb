@@ -1,0 +1,25 @@
+<div class="row">
+<div class="col-md-4">
+<div>
+<p>Pythagoras and other philosophers of the time believed that because mathematical concepts were more "practical"
+(easier to regulate and classify) than physical ones, they had greater actuality. St. Augustine of Hippo
+(A.D. 354–430) wrote "Numbers are the Universal language offered by the deity to humans as confirmation of the
+truth." Similar to Pythagoras, he too believed that everything had numerical relationships and it was up to
+the mind to seek and investigate the secrets of these relationships or have them revealed by divine grace.
+- Wikipedia</p>
+</div>
+	<form class="col-md-3" action="/people/<%=@person.id%>" method="post" >
+			<input type="hidden" name="_method" value="put" />
+	<div class="form-group">
+		<label for="first_name">First name</label>
+		<input type="text" name="first_name" value="<%=@person.first_name%>">
+		<br>
+		<label for="last_name">Last name</label>
+		<input type="text" name="last_name" value="<%=@person.last_name%>">
+		<br>
+		<label for="birthdate">Birth date</label>
+		<!--<input class="form-control" name="birthdate" type="date" /></div>-->
+		<input type="text" name="birthdate" value="<%=@person.birthdate%>">
+		<input class="btn btn-default" type="submit">		
+	</form>
+</div>

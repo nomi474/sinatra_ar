@@ -3,6 +3,7 @@
 		<tr>
 			<th>Name</th>
 			<th>Date of Birth</th>
+			<th>NameBirthdateEdit</th>
 		</tr>
 		   <% 
 			@people.each do |person|
@@ -16,6 +17,11 @@
 			</a>
 			</td>
 			<td><%=noUTC%></td>
+			<td>
+				<a href = "/people/<%=person.id%>/edit">
+					Edit
+				</a>
+			</td>
 		</tr>
 		<% end %>
 	</table>   

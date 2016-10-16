@@ -1,3 +1,6 @@
+<!--<p class="errors">
+	<%= "#{@errors}" %>
+</p>-->
 <div class="row">
 <div class="col-md-4">
 <div>
@@ -8,18 +11,26 @@ truth." Similar to Pythagoras, he too believed that everything had numerical rel
 the mind to seek and investigate the secrets of these relationships or have them revealed by divine grace.
 - Wikipedia</p>
 </div>
-	<form class="col-md-3" action="/people/<%=@person.id%>" method="post" >
-			<input type="hidden" name="_method" value="put" />
-	<div class="form-group">
+<div class="form-group">
+	<form class="<%= people_form_class(@person) %>" id = "<%= people_form_id(@person) %>" action="<%= people_form_action(@person) %>" method="post" >
+		<input type="hidden" name="_method" value="<%= people_form_method(@person) %>" />	
+	<div>
 		<label for="first_name">First name</label>
 		<input type="text" name="first_name" value="<%=@person.first_name%>">
 		<br>
+	</div>
+	<div>
 		<label for="last_name">Last name</label>
 		<input type="text" name="last_name" value="<%=@person.last_name%>">
 		<br>
+	</div>
+	<div>
 		<label for="birthdate">Birth date</label>
-		<!--<input class="form-control" name="birthdate" type="date" /></div>-->
-		<input type="text" name="birthdate" value="<%=@person.birthdate%>">
+		<input class="form-control" name="birthdate" type="date" /></div>
+		<!--<input type="text" name="birthdate" value="<%=@person.birthdate%>">-->
+	</div>
+	<div>
 		<input class="btn btn-default" type="submit">		
+	</div>
 	</form>
 </div>

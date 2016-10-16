@@ -1,0 +1,16 @@
+.new-person {
+    body {
+    background-color: rgb(255,0,255);
+    }
+    
+    h1 {
+    color: red;
+    text-align: center;
+    }
+}
+ 
+.edit-person {
+    body {
+    background-color: green;
+    }
+}

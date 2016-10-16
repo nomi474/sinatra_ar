@@ -1,6 +1,6 @@
 class Person < ActiveRecord::Base
 
-	#validates_presence_of :birthdate, :first_name, :last_name
+	validates_presence_of :birthdate, :first_name, :last_name
 	
 	def self.calculate_birth_number(birthdate)
 		yourBirthNumber= 0

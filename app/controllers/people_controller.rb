@@ -4,7 +4,7 @@
 	end
 	
 	get '/people/new' do
-		#@person = Person.new
+		@person = Person.new
 		erb :"/people/new"
 	end
 	

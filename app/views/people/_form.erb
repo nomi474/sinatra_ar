@@ -1,7 +1,7 @@
 <p class="errors">
-	<!--<%= "#{@errors}" %>-->
-	<%= people_form_errors(@person) %>
+	<%= "#{@errors}" %>
 </p>
+
 <div class="row">
 <div class="col-md-4">
 <div>
@@ -27,7 +27,7 @@ the mind to seek and investigate the secrets of these relationships or have them
 	</div>
 	<div>
 		<label for="birthdate">Birth date</label>
-		<input class="form-control" name="birthdate" type="date" /></div>
+		<input class="form-control" name="birthdate" type="date" value="<%=@person.birthdate%>" />
 		<!--<input type="text" name="birthdate" value="<%=@person.birthdate%>">-->
 	</div>
 	<div>

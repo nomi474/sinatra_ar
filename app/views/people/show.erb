@@ -8,11 +8,17 @@
 		<th>Last Name</th>
 		<th>Date of Birth</th>
 		<th>Numerology result</th>
+		<th>Your Planet</th>
 	</tr>
 	<tr>
-		<td width = 100><%= @person.first_name %></th>
+		<td width = 100><%= @person.first_name %></td>
 		<td width = 100><%= @person.last_name %></td>
 		<td><%= noUTC %></td>
 		<td width = 500><%= @message %></td>
+		<td width = 100><img src ="<%= @image %>" style="width:100; height:100;" /></td>
 	</tr>
 </table>
+<div>
+	<a href="/people">Main Page</a>&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="/people/new">Add a Person</a>
+</div>

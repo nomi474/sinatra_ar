@@ -46,4 +46,27 @@ class Person < ActiveRecord::Base
 			 "Uh oh! Your birth path number is not 1-9!"
 		end
 	end
+	
+	def self.getImage(calculated_number)
+		case calculated_number.to_i
+		when 1
+			 "http://www.wpclipart.com/weather/sun/sun_7/sun_strong_bold.svg"
+		when 2
+			 "https://upload.wikimedia.org/wikipedia/commons/9/9a/Howling_at_the_Moon_in_Mississauga.jpg"
+		when 3
+			 "https://upload.wikimedia.org/wikipedia/commons/2/2b/Jupiter_and_its_shrunken_Great_Red_Spot.jpg"
+		when 4
+			 "https://upload.wikimedia.org/wikipedia/commons/3/3d/Uranus2.jpg"
+		when 5
+			 "https://s-media-cache-ak0.pinimg.com/originals/62/7c/be/627cbea7e2029fb64d12b2c1d40578d7.jpg"
+		when 6
+			 "https://upload.wikimedia.org/wikipedia/commons/8/85/Venus_globe.jpg"
+		when 7
+			 "https://upload.wikimedia.org/wikipedia/commons/5/56/Neptune_Full.jpg"
+		when 8
+			 "https://upload.wikimedia.org/wikipedia/commons/c/c7/Saturn_during_Equinox.jpg"
+		when 9
+			 "https://upload.wikimedia.org/wikipedia/commons/5/58/Mars_23_aug_2003_hubble.jpg"
+		end
+	end	
 end
